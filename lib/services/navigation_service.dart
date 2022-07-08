@@ -5,21 +5,21 @@ class NavigationService {
     String page, {
     dynamic args,
   }) async {
-    await Get.toNamed(
-          page,
-          arguments: args,
-        );
-    // switch (page) {
-    //   case "/home":
-    //     await Get.offAllNamed(
-    //       page,
-    //     );
-    //     break;
-    //   default:
-    //     await Get.toNamed(
+    // await Get.toNamed(
     //       page,
     //       arguments: args,
     //     );
-    // }
+    switch (page) {
+      case "/setting":
+        await Get.offAllNamed(
+          page,
+        );
+        break;
+      default:
+        await Get.toNamed(
+          page,
+          arguments: args,
+        );
+    }
   }
 }
